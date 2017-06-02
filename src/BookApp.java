@@ -1,7 +1,9 @@
 
 public class BookApp extends Book{
 	public static void main(String[] args) {
-		Book b = new Book("Unknown author", "The Most Dangerous Game", "rabbit is the most dangerous game", "19.99", "The book is in stock");
+		Book b = new Book("Unknown author", "The Most Dangerous Game", "rabbit is the most dangerous game", 19.00, "Yes");
+		b.setIsInStock("Yes");
+		b.getSum(7);
 		/*
 		b.setAuthor("Unknown author");
 		b.setTitle("The Most Dangerous Game");

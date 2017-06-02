@@ -3,14 +3,14 @@ public class Book {
 private String title;
 private String author;
 private String desc;
-private String price;
+private double price;
 private String isInStock;
 
 public Book()
 	{
 	System.out.println("The book is written");
 	}
-public Book(String title, String author, String desc, String price, String isInStock)
+public Book(String title, String author, String desc, double price, String isInStock)
 {
 	this.title=title;
 	this.author=author ;
@@ -19,10 +19,18 @@ public Book(String title, String author, String desc, String price, String isInS
 	this.isInStock=isInStock;
 	//"The Most Dangerous Game","Unknown author","man is the most dangerous game", "$37.95","50
 }
+public void getSum(int s)
+{
+	if (isInStock.equals("No"))
+		System.out.println("none of the books are in stock");
+	else
+		System.out.println("The total cost is "+price*s);
+}
 public void getDisplayText()
 {
 	System.out.println(author+" "+title+" "+desc);
 }
+
 public String getTitle() {
 	return title;
 }
@@ -41,10 +49,10 @@ public String getDesc() {
 public void setDesc(String desc) {
 	this.desc = desc;
 }
-public String getPrice() {
+public double getPrice() {
 	return price;
 }
-public void setPrice(String price) {
+public void setPrice(double price) {
 	this.price = price;
 }
 public String getIsInStock() {
